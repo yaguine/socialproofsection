@@ -1,7 +1,12 @@
 /*General styles*/
 
-html{
-    font-size:16px;
+html {
+    font-size: 15px;
+    font-family: "Spartan", sans-serif; // 400 - 500 - 700
+    background-image: url("assets/images/image-anne.jpg");
+}
+
+body {
 }
 
 img {
@@ -11,17 +16,161 @@ img {
 
 /*Grid styles*/
 
-.row{
-    display:flex;
+.row {
+    display: flex;
     flex-wrap: wrap;
 }
 
-.limited{
-    max-width: 1140px;
-    margin:auto;
+.column {
+    display: flex;
+    flex-direction: column;
 }
 
-@for $i from 1 to 13{
-    $w:($i/12) * 100%;
-    .small-#{$i} {flex-basis: $w;}
+.limited {
+    max-width: 1140px;
+    margin: auto;
+}
+
+@for $i from 1 to 13 {
+    $w: ($i/12) * 100%;
+    .small-#{$i} {
+        flex-basis: $w;
+    }
+}
+
+/*Main styles*/
+
+main {
+    padding: 80px 25px 120px 25px;
+
+    background-image: url("../assets/images/bg-pattern-top-mobile.svg"),
+        url("../assets/images/bg-pattern-bottom-mobile.svg");
+    //background-image: url("../assets/images/image-anne.jpg"),url("../assets/images/image-colton.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: 0% 0%, 0% 50%;
+
+    /*H1 Styles*/
+
+    #div-h1 {
+        padding: 10px 40px;
+
+        text-align: center;
+
+        h1 {
+            margin: 0;
+
+            line-height: 100%;
+            color: $vd-magenta;
+            font-weight: 700;
+            font-size: 35px;
+        }
+    }
+
+    /*Paragraph under h1 styles*/
+
+    #div-main-p {
+        padding-top: 10px;
+        padding-bottom: 25px;
+
+        line-height: 180%;
+        text-align: center;
+        color: $dg-magenta;
+        font-weight: 500;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    /*Rates style*/
+
+    #column-rates {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 5% 0%;
+
+        .card-rate {
+            width: 100%;
+            margin-bottom: 3%;
+            padding: 4% 0;
+
+            background-color: $lg-magenta;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            .div-stars {
+                .star-img {
+                    width: 4%;
+                    margin: 0% 1% 3% 0.2%;
+                }
+            }
+
+            .div-rate {
+                color: $vd-magenta;
+                font-weight: 700;
+            }
+        }
+    }
+
+    /*Users styles*/
+
+    .container-cards-users {
+        .card-user {
+            margin-top: 5%;
+            padding: 12% 8% 10% 8%;
+
+            background-color: $vd-magenta;
+
+            border-radius: 10px;
+
+            color: $white;
+
+            .div-user-info {
+                padding-top: 2%;
+
+                .container-user-img {
+                    padding-top: 1%;
+                    img {
+                        width: 70%;
+
+                        margin-right: auto;
+
+                        border-radius: 100%;
+                    }
+                }
+
+                .div-user-headings {
+                    padding-left: 1.8%;
+
+                    margin-bottom: 5%;
+
+                    h3 {
+                        margin: 2.5% 0% 2% 0%;
+
+                        font-size: 1rem;
+                    }
+
+                    h4 {
+                        margin: 0;
+                        margin-top: 2%;
+
+                        font-size: 16px;
+                        color: $s-pink;
+                        font-weight: 200;
+                    }
+                }
+            }
+
+            .div-user-description {
+                p {
+                    line-height: 180%;
+                }
+            }
+        }
+    }
 }

@@ -1,4 +1,136 @@
-@for $i from 1 to 13{
-    $w:($i/12) * 100%;
-    .medium-#{$i} {flex-basis: $w;}
+@for $i from 1 to 13 {
+    $w: ($i/12) * 100%;
+    .medium-#{$i} {
+        flex-basis: $w;
+    }
+}
+
+/*Main styles*/
+
+main {
+    padding: 10% 10% 5% 10%;
+
+
+    background-image: none;
+    background-image: url("../assets/images/bg-pattern-top-desktop.svg");
+    //background-image: url("../assets/images/image-anne.jpg"),url("../assets/images/image-colton.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0% 0%;
+
+    /*H1 Styles*/
+
+    #div-h1 {
+        padding-left: 0;
+        padding-right: 15%;
+
+        text-align: left;
+
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    /*Paragraph under h1 styles*/
+
+    #div-main-p {
+        padding-left: 0;
+        padding-right: 15%;
+
+        text-align: left;
+
+        p {
+        }
+    }
+
+    /*Rates style*/
+
+    #column-rates {
+        margin-top: 0;
+
+        //Le ponemos margin a cada una de las cartas para dar el efecto de que están escalonadas
+
+        .card-rate:nth-of-type(1) {
+            margin-left: 0%;
+        }
+
+        .card-rate:nth-of-type(2) {
+            margin-left: 12.5%;
+        }
+
+        .card-rate:nth-of-type(3) {
+            margin-left: 25%;
+        }
+
+        .card-rate {
+            width: 75%;
+            padding: 2% 0%;
+
+            .div-stars {
+                padding-top: 1.2%;
+                .star-img {
+                    width: 11%;
+                    padding-left: 2%;
+                }
+            }
+
+            .div-rate {
+                padding-top: 1.5%;
+                padding-right: 10%;
+
+                text-align: left;
+                font-size: 14px;
+            }
+        }
+    }
+
+    /*Users styles*/
+
+    .container-cards-users {
+        display: flex;
+        justify-content: space-between;
+
+        //Le ponemos margin a cada una de las cartas para dar el efecto de que están escalonadas
+
+        .card-user:nth-of-type(1) {
+            margin-top: 0%;
+            margin-bottom: 4%;
+        }
+
+        .card-user:nth-of-type(2) {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .card-user:nth-of-type(3) {
+            margin-top: 4%;
+            margin-bottom: 0%;
+        }
+
+        .card-user {
+            flex-basis: 32%;
+            padding: 2.5%;
+
+            .div-user-info {
+                .container-user-img {
+                    img {
+                        width: 80%;
+                    }
+                }
+
+                .div-user-headings {
+                    h3 {
+                    }
+
+                    h4 {
+                    }
+                }
+            }
+
+            .div-user-description {
+                p {
+                }
+            }
+        }
+    }
 }
